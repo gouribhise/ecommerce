@@ -12,7 +12,7 @@ export default class Product extends Component {
           <ProductConsumer>
             {value => {
               return (
-                
+
                 <div
                   className="img-container p-5"
                   onClick={() => value.handleDetail(id)}
@@ -25,8 +25,7 @@ export default class Product extends Component {
                     disabled={inCart ? true : false}
                     onClick={() => {
                       value.addToCart(id);
-                      value.openModal(id);
-                    }}
+                     }}
                   >
                     {inCart ? (
                       <p className="text-capitalize mb-0" disabled>
