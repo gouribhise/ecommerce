@@ -24,8 +24,8 @@ setProducts=()=>{
   handleDetail=()=>{
     console.log("hello from detail")
   }
-  addToCart=()=>{
-    console.log("hello from cart")
+  addToCart=id=>{
+    console.log(`hello from cart id is ${id}`)
   }
   render(){
     return(
