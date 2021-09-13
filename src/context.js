@@ -78,7 +78,12 @@ removeItem=(id)=>{
   console.log("remove item")
 }
 clearCart=()=>{
-  console.log("clear cart")
+  this.setState(()=>{
+    return {cart:[]}
+  },()=>{
+    this.setProducts(); //get default products
+    this.addTotals();
+  })
 }
 addTotals=()=>{
   let subTotal=0;
