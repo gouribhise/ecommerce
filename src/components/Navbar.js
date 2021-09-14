@@ -6,30 +6,34 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
-      <Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5">
-        {/*
-https://www.iconfinder.com/icons/1243689/call_phone_icon
-Creative Commons (Attribution 3.0 Unported);
-https://www.iconfinder.com/Makoto_msk */}
-        <Link to="/">
+<Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5">  <div class="container-fluid">
+  <Link to="/">
           <img src={logo} alt="store" className="navbar-brand" />
-        </Link>
-        <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              products
-            </Link>
-          </li>
-        </ul>
-        <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
-            <span className="mr-2">
+        </Link>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li className="nav-item ml-5">
+        <Link to="/" className="nav-link">
+                     products
+                   </Link>        </li>
+
+
+      </ul>
+      <ul class="d-flex">
+      <Link to="/cart" className="ml-auto text-right">
+      <ButtonContainer>
+             <span >
               <i className="fas fa-cart-plus " />
             </span>
             my cart
           </ButtonContainer>
-        </Link>
-      </Nav>
+      </Link>
+       </ul>
+    </div>
+  </div>
+</Nav>
     );
   }
 }
